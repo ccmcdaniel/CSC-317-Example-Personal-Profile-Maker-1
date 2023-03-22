@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Data_Between_Pages.MainPage">
+
+    <ScrollView VerticalOptions="Center">
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="10"
+            HorizontalOptions="Center">
+
+            <VerticalStackLayout 
+                BackgroundColor="#333344"
+                Padding="25"
+                Margin="0,10,0, 0">
+                <Label 
+                    Text="Enter Your Name Below: "
+                    Margin="0, 0, 0, 20"
+                    FontSize="25"
+                    HorizontalOptions="Center"/>
+                <Entry x:Name="txtName"
+                       BackgroundColor="#CCCCCC"
+                       TextColor="Black"
+                       Placeholder="..." />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                BackgroundColor="#333344"
+                Padding="25"
+                Margin="0,10,0, 0">
+                <Label Margin="0, 0, 0, 20"
+                    FontSize="25"
+                       Text="Select your Birthday: "
+                       HorizontalOptions="Center"/>
+                <DatePicker
+                    BackgroundColor="#CCCCCC"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    x:Name="datePickerBirthday"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                BackgroundColor="#333344"
+                Padding="25"
+                Margin="0,10,0, 0">
+                <Label Margin="0, 0, 0, 0"
+                    FontSize="25"
+                       Text="Upload your Picture: "
+                       HorizontalOptions="Center"/>
+                <Label Margin="0, 0, 0, 20"
+                    FontSize="15"
+                       Text="Enter a URL or choose a file on your computer."
+                       HorizontalOptions="Center"/>
+                <HorizontalStackLayout>
+                    <Entry WidthRequest="300"
+                           BackgroundColor="#CCCCCC"
+                           TextColor="Black"
+                           x:Name="txtImageFileLocation"/>
+                    <Button Text="Choose Image.." Clicked="OpenFile"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Submit"
+                    BackgroundColor="#9999BB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="ShowPersonalPage"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
